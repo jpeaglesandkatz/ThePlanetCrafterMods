@@ -11,20 +11,15 @@
   </ItemGroup>
 
 	<!-- Steam Deployments -->
-	<PropertyGroup Condition="Exists('c:\Program Files (x86)\Steam\steamapps\common\The Planet Crafter')">
-		<GameDir>c:\Program Files (x86)\Steam\steamapps\common\The Planet Crafter\</GameDir>
-		<GameManaged>$(GameDir)\Planet Crafter_Data\Managed\</GameManaged>
-		<PluginsFolder>$(GameDir)\BepInEx\plugins</PluginsFolder>
-	</PropertyGroup>
-	<PropertyGroup Condition="Exists('e:\Steam\steamapps\common\The Planet Crafter')">
-		<GameDir>e:\Steam\steamapps\common\The Planet Crafter\</GameDir>
+	<PropertyGroup Condition="Exists('C:\GOG Games\The Planet Crafter')">
+		<GameDir>C:\GOG Games\The Planet Crafter\</GameDir>
 		<GameManaged>$(GameDir)\Planet Crafter_Data\Managed\</GameManaged>
 		<PluginsFolder>$(GameDir)\BepInEx\plugins</PluginsFolder>
 	</PropertyGroup>
 	
 	<!-- Deployment target directories -->
 	<PropertyGroup>
-		<Destination1>$(PluginsFolder)\akarnokd - $(Description)</Destination1>
+		<Destination1>$(PluginsFolder)\testing akarnokd - $(Description)</Destination1>
 	</PropertyGroup>
 
 	<ItemGroup>

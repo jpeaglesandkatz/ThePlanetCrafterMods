@@ -30,6 +30,10 @@
 		</Reference>
 	</ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Update="BepInEx.Core" Version="5.4.21" />
+    </ItemGroup>
+
   <Target Name="CopyDLLs" AfterTargets="Build">
     <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="$(PluginsFolder)\akarnokd - $(Description)" />
 	  <Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="$(Destination1)" />
@@ -125,9 +129,6 @@
       <Copy SourceFiles="$(SourceDir)images\aqualis_barren.png" DestinationFolder="$(OutputPath)\..\..\..\..\akarnokd-all\akarnokd - $(Description)" />
       <Copy SourceFiles="$(SourceDir)images\aqualis_lush.png" DestinationFolder="$(OutputPath)\..\..\..\..\akarnokd-all\akarnokd - $(Description)" />
 
-      <ZipDirectory
-            SourceDirectory="$(TargetDir)\$(AssemblyName)"
-            DestinationFile="$(OutputPath)\..\..\..\..\akarnokd-$(AssemblyName).zip"
-            Overwrite="true" />
+      <ZipDirectory SourceDirectory="$(TargetDir)\$(AssemblyName)" DestinationFile="$(OutputPath)\..\..\..\..\akarnokd-$(AssemblyName).zip" Overwrite="true" />
   </Target>
 </Project>

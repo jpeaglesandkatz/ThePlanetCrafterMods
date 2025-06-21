@@ -16,6 +16,9 @@
 		<Compile Include="..\LibCommon\UITranslator.cs" Link="UITranslator.cs" />
         <Compile Include="..\LibCommon\HarmonyIntegrityCheck.cs" Link="HarmonyIntegrityCheck.cs" />
     </ItemGroup>
+	<ItemGroup>
+	  <PackageReference Update="BepInEx.Core" Version="5.4.21" />
+	</ItemGroup>
 
 
 	<Target Name="CopyDLLs" AfterTargets="Build">

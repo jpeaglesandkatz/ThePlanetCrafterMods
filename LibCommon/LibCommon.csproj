@@ -11,6 +11,9 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
 	<Import Project="$(SolutionDir)\solution_private.targets" />
+	<ItemGroup>
+	  <PackageReference Update="BepInEx.Core" Version="5.4.21" />
+	</ItemGroup>
 
 <!--
   <Target Name="CopyDLLs" AfterTargets="Build">

@@ -16,6 +16,9 @@
 		<Compile Include="..\LibCommon\UITranslator.cs" Link="UITranslator.cs" />
         <Compile Include="..\LibCommon\HarmonyIntegrityCheck.cs" Link="HarmonyIntegrityCheck.cs" />
     </ItemGroup>
+	<ItemGroup>
+	  <PackageReference Update="BepInEx.Core" Version="5.4.21" />
+	</ItemGroup>
 
 	<Target Name="CopyDLLs" AfterTargets="Build">
     <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="$(Destination1)" />
@@ -27,9 +30,6 @@
     <Copy SourceFiles="$(SourceDir)labels-ro.txt" DestinationFolder="$(Destination1)" />
 	<Copy SourceFiles="$(SourceDir)labels-ro.txt" DestinationFolder="$(TargetDir)\$(AssemblyName)\akarnokd - $(Description)" />
     <Copy SourceFiles="$(SourceDir)labels-ro.txt" DestinationFolder="$(OutputPath)\..\..\..\..\akarnokd-all\akarnokd - $(Description)" />
-    <ZipDirectory
-            SourceDirectory="$(TargetDir)\$(AssemblyName)"
-            DestinationFile="$(OutputPath)\..\..\..\..\akarnokd-$(AssemblyName).zip"
-            Overwrite="true" />
+    <ZipDirectory SourceDirectory="$(TargetDir)\$(AssemblyName)" DestinationFile="$(OutputPath)\..\..\..\..\akarnokd-$(AssemblyName).zip" Overwrite="true" />
   </Target>
 </Project>

@@ -23,6 +23,9 @@
         <Compile Include="..\LibCommon\HashSetFast.cs" Link="HashSetFast.cs" />
         <Compile Include="..\LibCommon\CoroutineCoordinator.cs" Link="CoroutineCoordinator.cs" />
     </ItemGroup>
+	<ItemGroup>
+	  <PackageReference Update="BepInEx.Core" Version="5.4.21" />
+	</ItemGroup>
 
   <Target Name="CopyDLLs" AfterTargets="Build">
 	  <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="$(Destination1)" />

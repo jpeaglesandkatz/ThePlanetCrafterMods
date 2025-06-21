@@ -15,15 +15,15 @@
 		<Compile Include="..\LibCommon\BepInExLoggerFix.cs" Link="BepInExLoggerFix.cs" />
         <Compile Include="..\LibCommon\HarmonyIntegrityCheck.cs" Link="HarmonyIntegrityCheck.cs" />
     </ItemGroup>
+	<ItemGroup>
+	  <PackageReference Update="BepInEx.Core" Version="5.4.21" />
+	</ItemGroup>
 
 	<Target Name="CopyDLLs" AfterTargets="Build">
     <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="$(Destination1)" />
 		<Copy SourceFiles="$(TargetDir)$(AssemblyName).pdb" DestinationFolder="$(Destination1)" />
 		<Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="$(TargetDir)\$(AssemblyName)\akarnokd - $(Description)" />
     <Copy SourceFiles="$(TargetDir)$(AssemblyName).dll" DestinationFolder="$(OutputPath)\..\..\..\..\akarnokd-all\akarnokd - $(Description)" />
-	  <ZipDirectory
-            SourceDirectory="$(TargetDir)\$(AssemblyName)"
-            DestinationFile="$(OutputPath)\..\..\..\..\akarnokd-$(AssemblyName).zip"
-            Overwrite="true" />
+	  <ZipDirectory SourceDirectory="$(TargetDir)\$(AssemblyName)" DestinationFile="$(OutputPath)\..\..\..\..\akarnokd-$(AssemblyName).zip" Overwrite="true" />
   </Target>
 </Project>

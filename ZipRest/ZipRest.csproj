@@ -35,10 +35,11 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Update="BepInEx.Core" Version="5.4.21" />
+  </ItemGroup>
+
   <Target Name="CopyDLLs" AfterTargets="Build">
-    <ZipDirectory
-            SourceDirectory="$(OutputPath)\..\..\..\..\akarnokd-all"
-            DestinationFile="$(OutputPath)\..\..\..\..\akarnokd-all.zip"
-            Overwrite="true" />
+    <ZipDirectory SourceDirectory="$(OutputPath)\..\..\..\..\akarnokd-all" DestinationFile="$(OutputPath)\..\..\..\..\akarnokd-all.zip" Overwrite="true" />
   </Target>
 </Project>

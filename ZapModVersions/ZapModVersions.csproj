@@ -12,4 +12,12 @@
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="&quot;$(TargetDir)ZapModVersions.exe&quot; $(ProjectDir)\..\" />
   </Target>
+
+  <ItemGroup>
+    <PackageReference Include="BepInEx.Analyzers" Version="1.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="BepInEx.Core" Version="5.4.21" />
+  </ItemGroup>
 </Project>
